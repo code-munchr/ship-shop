@@ -1,0 +1,2 @@
+class ShoppingExperience < ApplicationRecord
+end

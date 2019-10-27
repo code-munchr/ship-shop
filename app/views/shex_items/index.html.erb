@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Shex Items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Shopping experience</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @shex_items.each do |shex_item| %>
+      <tr>
+        <td><%= shex_item.item_id %></td>
+        <td><%= shex_item.shopping_experience_id %></td>
+        <td><%= link_to 'Show', shex_item %></td>
+        <td><%= link_to 'Edit', edit_shex_item_path(shex_item) %></td>
+        <td><%= link_to 'Destroy', shex_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Shex Item', new_shex_item_path %>

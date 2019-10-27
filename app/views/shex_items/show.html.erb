@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @shex_item.item_id %>
+</p>
+
+<p>
+  <strong>Shopping experience:</strong>
+  <%= @shex_item.shopping_experience_id %>
+</p>
+
+<%= link_to 'Edit', edit_shex_item_path(@shex_item) %> |
+<%= link_to 'Back', shex_items_path %>
