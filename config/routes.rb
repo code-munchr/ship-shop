@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+  root to: 'items#index'
   resources :shex_items
   resources :shopping_experiences
   resources :items
