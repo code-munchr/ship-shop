@@ -24,6 +24,7 @@ class ItemsController < ApplicationController
   # POST /items
   # POST /items.json
   def create
+    binding.pry
     @item = Item.new(item_params)
 
     respond_to do |format|
