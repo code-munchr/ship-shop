@@ -1,6 +1,51 @@
 class ShoppingExperiencesController < ApplicationController
   before_action :set_shopping_experience, only: [:show, :edit, :update, :destroy]
 
+  def display_cart
+ 
+    @cart = session[:current_cart].except("shex_id")
+    render 'displayCart'
+    
+  end
+
+  def delete_from_my_cart
+    binding.pry
+
+    session[:current_cart].delete(params[:item_id])
+    #  session[:current_cart][parmas[:item_id]].delete
+    redirect_to display_cart_url
+  end
+
+  def add_to_cart
+    
+   
+    if !session[:current_cart] 
+      session[:current_cart] =  {:shex_id => session[:current_cart_id] } 
+    end
+    
+    
+   
+
+       #checks if session hash's current cart key doesn't have params[:item_id] key, value pair 
+       if  !session[:current_cart].key?(params[:item_id]) 
+        # set {units: 1}  as params[item_id] key's  value 
+        
+        session[:current_cart][params[:item_id]] = {}
+        session[:current_cart][params[:item_id]][:quantity] = 1
+       
+         
+        
+   else
+     
+       #else  increment  value  of  quantity
+       
+       session[:current_cart][params[:item_id]]["quantity"] = session[:current_cart][params[:item_id]]["quantity"] + 1
+       #ShexItem.create(item_id: params[:item_id], shopping_experience_id: session[:current_cart_id] ) 
+    end
+
+    
+      
+end
   # GET /shopping_experiences
   # GET /shopping_experiences.json
   def index

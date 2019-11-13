@@ -4,7 +4,15 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
   def index
+
+    # reset_session
+    if !session[:current_cart_id]
+      new_shex = ShoppingExperience.create
+      session[:current_cart_id] = new_shex 
+    end
+    
     @items = Item.all
+  
   end
 
   # GET /items/1
@@ -24,7 +32,7 @@ class ItemsController < ApplicationController
   # POST /items
   # POST /items.json
   def create
-    binding.pry
+    
     @item = Item.new(item_params)
 
     respond_to do |format|

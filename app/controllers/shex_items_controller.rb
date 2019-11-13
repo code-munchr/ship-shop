@@ -7,6 +7,11 @@ class ShexItemsController < ApplicationController
     @shex_items = ShexItem.all
   end
 
+
+
+
+
+
   # GET /shex_items/1
   # GET /shex_items/1.json
   def show
