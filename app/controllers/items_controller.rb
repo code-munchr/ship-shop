@@ -4,11 +4,11 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
   def index
-
+    
     # reset_session
     if !session[:current_cart_id]
       new_shex = ShoppingExperience.create
-      session[:current_cart_id] = new_shex 
+      session[:current_cart_id] = new_shex.id
     end
     
     @items = Item.all

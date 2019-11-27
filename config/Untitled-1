@@ -1,0 +1,15 @@
+   done so far:
+1) create scafolds
+2) changed  item form to display radio button collection of categories
+3) changed items controller to save  and permit new category in params
+4) created a  custom  js.erb in javascripts and  importd  it  in packs
+5) set up devise
+6)add "add to cart button" in item index template
+7) set  up jquery with yarn
+8) jquery, rady, click and  ajax  fucntion used
+9) set  session[:current_cart_id] in items  controller#index 
+10) add to  items to session[current_cart]
+11) create diplay cart  route  and template  in sopping_exp controller
+
+
+

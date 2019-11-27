@@ -1,17 +1,25 @@
 <%=link_to 'back', items_path %>
 <p> Your  cart</p>
 
+<%if session[:current_cart] %>
+
 <% @cart.each do |key,value| %>
       
     <% item = Item.find(key.to_i)%>
+    
+    <% #value {"quantity": "number"} %> 
 
-    <% #value {"quantity": "number"} %>
-         <%= item.name %>
-         <%= item.price %>
-         <%= item.quantity %>
-         <%= item.category.title %> 
-         <button class="cart_plus_button"> + </button>
-         <button class="cart_minus_button"> - </button>
+        <%= item.name %> 
+         <%= item.price %> 
+  
+          
+         <%= item.quantity %> 
+          <%= item.category.title %>
+          quantity : <%= value["quantity"]%>  
+          <button class="cart_plus_button"> + </button> 
+          <button class="cart_minus_button"> - </button> 
+
+         
          <%= link_to 'delete', delete_item_from_cart_path(item.id),method: :post  %>
         
 
@@ -20,4 +28,6 @@
     
   <% end %>
 
-  <%= link_to 'checkout', delete_item_from_cart_path(item.id),method: :post  %>
+  <% end %>
+
+  <%= link_to 'checkout', checkout_path ,method: :post  %>
