@@ -11,7 +11,8 @@ $( document ).ready(function() {
             method: "POST",
             headers: {'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')},
              url: 'shopping_experience/add_to_cart',
-             data: { item_id: id }
+             data: { item_id: id },
+             
         })
 
     

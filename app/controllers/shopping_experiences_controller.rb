@@ -46,8 +46,11 @@ class ShoppingExperiencesController < ApplicationController
        #ShexItem.create(item_id: params[:item_id], shopping_experience_id: session[:current_cart_id] ) 
        
     end
-  binding.pry
-   puts(' at to cart method end')
+   
+   puts(' at to cart method end  ... . . . . . . . . .
+   sewdwdwdw  ')
+
+   redirect_to  '/'
 end
   # GET /shopping_experiences
   # GET /shopping_experiences.json
