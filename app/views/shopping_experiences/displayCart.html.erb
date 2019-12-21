@@ -18,6 +18,7 @@
            quantity : <%= value["quantity"]%>  
           <button class="cart_plus_button"> + </button> 
           <button class="cart_minus_button"> - </button> 
+          
 
          
          <%= link_to 'delete', delete_item_from_cart_path(item.id),method: :post  %>
@@ -28,6 +29,23 @@
     
   <% end %>
 
-  <% end %>
 
+  <% end %>
+ 
+  <form action="/shopping_experience/check_out" method="post" id="payment-form">
+  <%=hidden_field_tag request_forgery_protection_token.to_s, form_authenticity_token %> 
+  <div class="form-row">
+    <label for="card-element">
+      Credit or debit card
+    </label>
+    <div id="card-element">
+      <!-- A Stripe Element will be inserted here. -->
+    </div>
+
+    <!-- Used to display Element errors. -->
+    <div id="card-errors" role="alert"></div>
+  </div>
+
+  <button>Submit Payment</button>
+</form>
   <%= link_to 'checkout', checkout_path ,method: :post  %>

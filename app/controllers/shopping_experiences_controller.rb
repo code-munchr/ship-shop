@@ -6,8 +6,28 @@ class ShoppingExperiencesController < ApplicationController
     if session[:current_cart]
     @cart = session[:current_cart].except("shex_id")
     end 
+    
+  
+   
     render 'displayCart'
     
+  end
+
+  def check_out
+    Stripe.api_key = 'sk_test_nvFyasCVrO6uUNIOtyCZyM0L00eqn9vlgM'
+
+    # Token is created using Stripe Checkout or Elements!
+   # Get the payment token ID submitted by the form:
+   binding.pry
+    token = params[:stripeToken]
+ 
+     charge = Stripe::Charge.create({
+       amount: 999,
+       currency: 'aud',
+       description: 'Example charge',
+        source: token,
+     })
+      
   end
 
   def delete_from_my_cart

@@ -21,7 +21,7 @@ Rails.application.routes.draw do
 
       post '/shopping_experience/delete_from_my_cart_/:item_id', to: 'shopping_experiences#delete_from_my_cart', as: :delete_item_from_cart
 
-      post '/shopping_experience/check_out', to: 'shopping_experiences#checkout', as: :checkout
+      post '/shopping_experience/check_out', to: 'shopping_experiences#check_out', as: :checkout
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
