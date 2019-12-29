@@ -1,36 +1,52 @@
-<p id="notice"><%= notice %></p>
-<%= link_to 'view cart', display_cart_path %>
-<h1>Items</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Price</th>
-      <th>Quantity</th>
-      <th>Category</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<%= render 'layouts/partials/Banner' %>
 
-  <tbody>
-    <% @items.each do |item| %>
-      <tr>
-        <td><%= item.name %></td>
-        <td><%= item.price %></td>
-        <td><%= item.quantity %></td>
-        <td><%= item.category.title %></td>
+</br>
 
+
+
+
+
+
+
+<section class="">
+		<!-- single product slide -->
+		<div class="">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-6 text-center">
+						<div class="section-title">
+							<h1>Latest Products</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+								dolore
+								magna aliqua.</p>
+						</div>
+					</div>
+				</div>
+        <div class="row">
         
-        <td><%= link_to 'Show', item %></td>
-        <td> <a class="add_to_cart_link"   data-item_id=<%=item.id %> href="#"> add to cart button</a></td>
-        <td><%= link_to 'Edit', edit_item_path(item) %></td>
-        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+          <% @items.each do |item|   %>
+            
+           <%= render 'layouts/IndexItem', :locals=>{item: item}  %>
 
-<br>
+           <%end%>
+          <!-- single product -->
+          
 
-<%= link_to 'New Item', new_item_path %>
+
+
+				
+          
+
+
+				
+				</div>
+			</div>
+    </div>
+    
+
+		
+		
+	</section>
+	<!-- end product Area -->
+

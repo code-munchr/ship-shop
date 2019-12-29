@@ -18,7 +18,7 @@ class ShoppingExperiencesController < ApplicationController
 
     # Token is created using Stripe Checkout or Elements!
    # Get the payment token ID submitted by the form:
-   binding.pry
+  
     token = params[:stripeToken]
  
      charge = Stripe::Charge.create({
