@@ -20,5 +20,12 @@
   <%= @item.category_id %>
 </p>
 
+
+<p>
+  <strong>Pictures:</strong>
+  
+<%= image_tag url_for(@item.images[1]) %>
+</p>
+
 <%= link_to 'Edit', edit_item_path(@item) %> |
 <%= link_to 'Back', items_path %>
