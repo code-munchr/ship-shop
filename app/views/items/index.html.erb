@@ -27,10 +27,9 @@
         
           <% @items.each do |item|   %>
             
-           <%= render 'layouts/IndexItem', :locals=>{item: item}  %>
+           <%= render 'layouts/partials/IndexItem', :locals=>{item: item}  %>
 
            <%end%>
-          <!-- single product -->
           
 
 
