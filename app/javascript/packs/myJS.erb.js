@@ -1,3 +1,5 @@
+
+
 // var stripe = Stripe('pk_test_trtKTfzHcBU3Wwh3HmWSYcol003V3nb4wF');
 // var elements = stripe.elements();
 
@@ -71,6 +73,7 @@
   // Add an instance of the card Element into the `card-element` <div>.
   document.addEventListener("DOMContentLoaded", function(event) { 
     //do work
+
   });
 
 //    

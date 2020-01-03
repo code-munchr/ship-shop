@@ -5,6 +5,7 @@ ruby '2.6.3'
 gem 'devise'
 gem 'pry'
 gem "jquery-rails"
+gem 'magnific-popup-rails', '~> 1.0.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0'

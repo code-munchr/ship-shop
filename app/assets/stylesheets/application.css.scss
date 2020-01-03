@@ -10,10 +10,24 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
  *= require_self
+ *= require magnific-popup
  */
+ @import  'bootstrap/scss/bootstrap';
+ @import 'scss/main.scss';
+ @import 'css/linearicons.css';
+ @import 'css/font-awesome.min.css';
+ @import 'css/themify-icons.css';
+ @import 'css/bootstrap.css';
+ @import 'css/owl.carousel.css';
+ @import 'css/nice-select.css';
+ @import 'css/nouislider.min.css';
+ @import 'css/ion.rangeSlider.css';
+ @import 'css/ion.rangeSlider.skinFlat.css';
+ @import 'css/magnific-popup.css';
+ @import 'css/main.css';
 
+ 
 
 
 

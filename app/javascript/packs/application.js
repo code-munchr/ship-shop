@@ -2,28 +2,38 @@
 // present in this directory. You're encouraged to place your actual application logic in
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
+//= require magnific-popup
 
 require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-
-require("../packs/myJS.erb.js")
-require("../packs/js/countdown")
-require("../packs/js/ion.rangeSlider")
-require("../packs/js/gmaps.min")
-require("../packs/js/main")
+require("./myJS.erb.js")
 
 
-require("../packs/js/vendor/jquery-2.2.4.min")
-require("../packs/js/vendor/jquery-2.2.4.min")
-require("../packs/js/vendor/popper")
-require("../packs/js/jquery.ajaxchimp.min")
-require("../packs/js/jquery.nice-select.min.js")
-require("../packs/js/jquery.sticky")
-require("../packs/js/nouislider.min")
-require("../packs/js/jquery.magnific-popup.min")
-require("../packs/js/owl.carousel.min")
+// require("js/vendor/jquery-2.2.4.min")
+// require("js/vendor/bootstrap.min")
+// require("js/jquery.ajaxchimp.min")
+// require("js/jquery.nice-select.min")
+// require("js/jquery.sticky")
+// require("js/nouislider.min")
+ // require("js/countdown.js")
+// require("js/jquery.magnific-popup.min")
+// require("js/gmaps.min")
+// require("js/main")
+// require("js/owl.carousel.min")
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
