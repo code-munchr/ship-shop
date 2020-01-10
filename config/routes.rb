@@ -2,8 +2,10 @@ Rails.application.routes.draw do
 
   devise_for :users
   root to: 'items#index'
-  resources :shopping_experiences
+  resources :shopping_experiences 
+
   
+  get 'items/search', to: 'items#search', as: :search 
   resources :items
   resources :categories
    

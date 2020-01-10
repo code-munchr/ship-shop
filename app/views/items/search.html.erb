@@ -1,0 +1,32 @@
+  <%= render 'layouts/partials/PicturelessBanner' %>	
+	
+	<div class="container">
+		<div class="row">
+
+		       <%= render 'items/partials/SidebarCategories', :locals=> {categories: Category.all }%>
+               <%= render 'items/partials/SidebarBrands'%>
+
+				
+			</div>
+			<div class="col-xl-9 col-lg-8 col-md-7">
+				 <%=render 'items/partials/FilterOptions' %>
+
+
+				<!-- Start Best Seller -->
+				<section class="lattest-product-area pb-40 category-list">
+					<div class="row">
+
+					     <% @items.each do |item| %>
+						 <%= render 'layouts/partials/IndexItem', :locals=>{item: item} %>
+						 <%end%>
+
+
+						<div>
+				</section>
+				<!-- End Best Seller -->
+				<!-- Start Filter Bar -->
+				<%= render 'items/partials/FilterOptions' %>
+				<!-- End Filter Bar -->
+			</div>
+		</div>
+	</div>

@@ -15,6 +15,22 @@ class ItemsController < ApplicationController
   
   end
 
+
+  def search
+
+     
+     if params[:category]
+     @items = Item.where(category_id: Category.find_by(title: params[:category]).id )
+     else
+      @items = Item.all
+     end
+
+    
+ 
+
+  end
+
+
   # GET /items/1
   # GET /items/1.json
   def show
